@@ -1,0 +1,36 @@
+<table border="1">
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>    
+  </tr>
+    <tr>
+    <td>Example Data</td>
+    <td>Example Data</td>
+    <td>Example Data</td>
+    <td>Example Data</td>
+    <td>Example Data</td>
+    <td>Example Data</td>
+    <td>Example Data</td>
+  </tr>
+</table>
+
+<ul>
+<% 52.downto(1) do |week| %>
+  <li>
+    <%= week %>
+
+    <ul>
+      <% 7.times do |day| %>
+        <li>
+          <%= day %>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+</ul>

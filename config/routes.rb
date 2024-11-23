@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-
-  # This is a blank app! Pick your first screen, build out the RCAV, and go from there. E.g.:
-
-  # get "/your_first_screen" => "pages#first"
-  
+  get("/backdoor", { :controller => "forms", :action => "add_form" })
+  get("/", { :controller => "forms", :action => "index" })
+  post("/add_update", {:controller => "forms", :action => "add_task"})
 end
+
+
+# rails generate model Task status:binary
+# rails db:migrate
+
