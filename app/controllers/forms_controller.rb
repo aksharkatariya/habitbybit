@@ -1,6 +1,7 @@
 class FormsController < ApplicationController
   def index
     @task = Task.all
+    
     render({ :template => "forms_templates/home" })
   end
 
@@ -12,6 +13,6 @@ class FormsController < ApplicationController
     t = Task.new
     t.status = params.fetch("task1_param")
     t.save
-    render({:template => "forms_templates/backdoor"})
+    redirect_to("/")
   end
 end
